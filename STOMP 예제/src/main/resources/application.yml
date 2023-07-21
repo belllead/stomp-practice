@@ -1,0 +1,32 @@
+spring:
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  freemarker:
+    cache: false
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  datasource:
+    url: jdbc:h2:mem:testdb # DB ?? URL
+#    url: jdbc:h2:~/testdb # DB ?? URL
+    username: sa # DB ?? username
+    password: # DB ?? password, ??
+    driver-class-name: org.h2.Driver # DB ?? ????
+  h2.console:
+    enabled: true # ?? ?? ??, ???? ? ?????? ?? ??
+  jpa:
+    hibernate:
+      ddl-auto: create # ???? ???? ??
+    properties:
+      hibernate:
+        format_sql: true # SQL ?? ??
+        show_sql: true
+logging:
+  level:
+    org.hibernate.SQL: debug # SQL ?? ??? ?? ?? ?? ??
+
+server:
+  port: 8081
